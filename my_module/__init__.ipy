@@ -1,0 +1,52 @@
+{
+ "cells": [],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
+
+
+
+def shopping_cart():
+    list = []
+    flag = True
+
+    while flag:
+        print("Hello, please input your grocery items into this list.\nYou can add as many items as you want and delete any item as well.")
+        user_input = input("Type 'quit' to exit. Type 'add' to add an item. Type 'delete' to delete an item. Type 'show' to view current list.")
+    
+        if user_input == 'quit':
+            print(list)
+            flag = False
+    
+        elif user_input == 'add':
+            item = input("Type 'quit' to exit. Enter item to add")
+            list.append(item)
+        elif user_input == 'delete':
+            item = input("Type 'quit' to exit. Enter item to delete")
+            list.remove(item)
+        elif user_input == 'show':
+            print(list)
+        else:
+            print("Sorry that is not a valid selection. Please try again.")
+    return
+
+def circle_cirum():
+    pi = 3.141592653589793
+    cir = 0
+    
+    print("Do you know the diamater of the circle?")
+    user_input = input("Please type 'y' or 'n'.")
+    
+    if user_input == 'y':
+        d = input("What is the diameter of a circle?")
+        d = int(d)
+        cir = pi*d
+        print(cir)
+
+    elif user_input == 'n':
+        r = input("What is the radius of a circle?")
+        r = int(r)
+        cir = 2*pi*r
+        print(cir)
+
